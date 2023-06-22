@@ -1,16 +1,23 @@
-# This is a sample Python script.
+print("Bem vindo ao jogo da forca!")
+palavra_secreta = 'botafogo'
+letras_acertadas = ['_', '_', '_', '_', '_', '_', '_', '_']
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+acertou = False
+enforcou = False
+erros = 0
 
+while not acertou and not enforcou:
+    chute = input('Qual letra?\n')
+    if(chute in palavra_secreta):
+        posicao = 0
+        for letra in palavra_secreta:
+            if chute.upper() == letra.upper():
+                letras_acertadas[posicao] = letra
+            posicao += 1
+        else:
+            erros += 1
+        print(letras_acertadas)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+        enforcou = erros == 6
+        acertou = '_' not in letras_acertadas
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
