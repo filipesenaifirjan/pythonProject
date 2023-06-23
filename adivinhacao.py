@@ -10,7 +10,7 @@ def exibir_personagem():
     ''')
 
 def jogar_adivinhacao():
-    palavras = ['python', 'programacao', 'computador', 'desenvolvimento', 'algoritmo']
+    palavras = ['biomob', 'petropolis', 'serratec', 'filipe', 'internet', 'cerveja']
     palavra_secreta = random.choice(palavras).lower()
     palavra_adivinhada = ['_'] * len(palavra_secreta)
     tentativas = 6
