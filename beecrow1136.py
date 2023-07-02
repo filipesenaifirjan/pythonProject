@@ -1,4 +1,4 @@
-#leitura otica
+#Bingo
 
 while True:
     try:
