@@ -1,0 +1,12 @@
+from math import log, floor
+
+while True:
+    entrada = input()
+    n = int(entrada[0] + entrada[1]) * 10 ** int(entrada[3])
+    if n == 0:
+        break
+    expo = floor(log(n) / log(2))
+    exibir = n - (2**expo)
+    exibir *= 2
+    exibir += 1
+    print("%d" % (exibir))
